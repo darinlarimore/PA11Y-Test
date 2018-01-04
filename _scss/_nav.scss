@@ -1,0 +1,398 @@
+.navbar-wrapper {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.navbar-default {
+  width: 100%;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.navbar-static {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.navbar-static .navbar-checkbox:checked ~ .navbar-menu {
+  position: absolute;
+}
+
+.navbar-fixed {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.navbar-fixed-bottom {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.navbar-hamburger span,
+.navbar-hamburger span::after,
+.navbar-hamburger span::before {
+  display: block;
+  height: 5px;
+  width: 37px;
+  transition: all 0.6s ease;
+}
+
+.navbar-checkbox:checked ~ .navbar-menu li .navbar-hamburger::before {
+  content: 'Close';
+  font-size: 1.5rem;
+  position: absolute;
+  right: 5rem;
+  bottom: .5rem;
+}
+
+.navbar-checkbox:checked ~ .navbar-menu li .navbar-hamburger span {
+  background-color: transparent;
+}
+
+.navbar-checkbox:checked ~ .navbar-menu li .navbar-hamburger span::after,
+.navbar-checkbox:checked ~ .navbar-menu li .navbar-hamburger span::before {
+  margin-top: 0;
+}
+
+.navbar-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 58px;
+  width: auto;
+  flex: 0 0 170px;
+}
+
+.navbar-menu-left .navbar-header,
+.navbar-menu-left .navbar-navigation {
+  justify-content: flex-start;
+}
+
+.navbar-menu-right .navbar-hamburger {
+  margin-left: auto;
+}
+
+.navbar-brand {
+  font-size: 1.6em;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  height: 150px;
+  width: 196px;
+
+  img {
+    width: 75%;
+  }
+}
+
+.navbar-menu {
+  transition: all 0.4s;
+  width: 100%;
+}
+
+.navbar-navigation {
+  transition: all 0.4s;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0 0 0 0;
+  margin: 0;
+  color: #fff;
+  background: transparent;
+
+  .active {
+    background-color: #741E34;
+  }
+}
+
+.navbar-checkbox:checked ~ .navbar-menu .navbar-navigation {
+    background: #981E32;
+}
+
+.navbar-item a,
+.navbar-menu a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.navbar-item {
+  height: 58px;
+  width: 100%;
+  border-top: 1px solid #fff;
+  text-transform: uppercase;
+
+  li {
+    text-transform: initial;
+  }
+
+  &__stick-right {
+    margin-left: 0;
+
+
+    .navbar-item {
+      border-top: none;
+    }
+
+    .button {
+      margin-left: 0;
+      border-radius: 0;
+    }
+  }
+}
+
+.navbar-item a {
+  padding: 18px 24px;
+  display: block;
+  font-size: 1.286rem; /* 18/14 */
+}
+
+.navbar-hamburger {
+  padding: 18px 24px;
+  position: absolute;
+  cursor: pointer;
+  top: 2rem;
+  right: 1rem;
+}
+
+.navbar-hamburger span::after,
+.navbar-hamburger span::before {
+  content: '';
+  position: absolute;
+}
+
+.navbar-hamburger span::before {
+
+}
+
+.navbar-navigation .button {
+  padding: 0;
+  width: 100%;
+}
+
+.navbar-hamburger span::before {
+  margin-top: -9px;
+}
+
+.navbar-hamburger span::after {
+  margin-top: 9px;
+}
+
+.navbar-checkbox {
+  display: none;
+}
+
+.navbar-checkbox:not(:checked) ~ .navbar-menu {
+  overflow: hidden;
+  height: 0;
+}
+
+.navbar-checkbox:checked ~ .navbar-menu {
+  transition: all 0.6s ease;
+}
+
+.dropdown {
+  position: inherit;
+  height: auto;
+  min-height: 58px;
+}
+
+.dropdown:hover > ul {
+  position: relative;
+  display: block;
+  min-width: 100%;
+}
+
+.dropdown > a::after {
+  position: absolute;
+  content: '';
+  right: 10px;
+  top: 25px;
+  border-width: 5px 5px 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.dropdown > ul {
+  display: block;
+  list-style: none;
+  padding: 0;
+}
+
+.dropdown > ul .navbar-item {
+  min-width: 100%;
+  height: 29px;
+  padding: 5px 10px 5px 40px;
+}
+
+.dropdown > ul .navbar-item a {
+  min-height: 29px;
+  line-height: 29px;
+  padding: 0;
+  pointer-events: all;
+}
+
+@media screen and (min-width: $phone) {
+  .navbar-navigation {
+    flex-flow: row;
+    justify-content: flex-start;
+    padding: 3rem 2rem;
+    background: transparent;
+    align-items: center;
+
+    .dropdown {
+      position: relative;
+      min-height: 0;
+      height: 25px;
+    }
+
+    .active {
+      background-color: transparent;
+      border-bottom: 2px solid #fff;
+    }
+  }
+
+  .navbar-brand {
+    font-size: 1.6em;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .navbar-hamburger {
+    display: none;
+  }
+
+  .navbar-checkbox:not(:checked) ~ .navbar-menu {
+    overflow: visible;
+  }
+
+  .navbar-checkbox:checked ~ .navbar-menu {
+    height: 0;
+  }
+
+  .navbar-menu .navbar-item {
+    border-top: 0;
+    width: auto;
+    box-sizing: border-box;
+  }
+
+  .navbar-item:hover {
+    border-bottom: 2px solid #fff;
+  }
+
+  .navbar-item {
+    text-transform: uppercase;
+    height: 25px;
+    margin: 0 1rem;
+
+    a {
+      padding: 0;
+    }
+
+    &__stick-right {
+      width: initial;
+      margin-left: auto;
+
+      .button {
+        margin-left: 0;
+        border-radius: 8px;
+        padding: 1rem 1.5rem;
+        font-weight: 300;
+        border-bottom: none;
+        box-sizing: content-box;
+      }
+    }
+  }
+
+  .navbar-menu-right .navbar-header {
+  }
+
+  .dropdown {
+    height: 58px;
+    margin-right: 2.25rem;
+  }
+
+  .dropdown::after {
+    content: '\25BC';
+    position: absolute;
+    left: 8.2rem;
+    top: .64rem;
+    font-size: .6rem;
+  }
+
+  .dropdown:hover > ul {
+
+    li {
+      padding: 0;
+      margin: 0;
+
+      a {
+        font-size: .95rem;
+      }
+    }
+  }
+
+  .dropdown > ul {
+    display: none;
+  }
+
+  .dropdown > ul .navbar-item {
+    padding: 5px 10px;
+    height: 25px;
+  }
+
+  .dropdown > ul .navbar-item a {
+    white-space: nowrap;
+  }
+}
+
+.navbar-checkbox:checked + .navbar-menu .navbar-hamburger-doublespin span::before {
+  transform: rotate(225deg);
+}
+
+.navbar-checkbox:checked + .navbar-menu .navbar-hamburger-doublespin span::after {
+  transform: rotate(-225deg);
+}
+
+.navbar-checkbox:checked + .navbar-menu .navbar-hamburger-spin span::before {
+  transform: rotate(45deg);
+}
+
+.navbar-checkbox:checked + .navbar-menu .navbar-hamburger-spin span::after {
+  transform: rotate(-45deg);
+}
+/******* colors *******/
+.navbar-menu-dark,
+.navbar-menu-dark .dropdown ul {
+  background-color: transparent;
+  color: #fff;
+}
+
+.navbar-menu-dark .active,
+.navbar-menu-dark .navbar-item:hover {
+}
+
+.navbar-menu-dark .navbar-hamburger span,
+.navbar-menu-dark .navbar-hamburger span::after,
+.navbar-menu-dark .navbar-hamburger span::before {
+  background-color: #fff;
+}

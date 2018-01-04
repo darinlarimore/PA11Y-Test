@@ -1,0 +1,22 @@
+<section class="cta-learn-more">
+  <div class="cta-learn-more__wrapper">
+    <h2 class="cta-learn-more__heading">{{ page.ctaLearnMore.heading }}</h2>
+    <div class="cta-learn-more__text-container">
+      {% if page.ctaLearnMore.call != "" %}
+      <a href="tel:{{ page.ctaLearnMore.call }}">
+        <div class="cta-learn-more__text-sub-container">
+          <h3>CALL</h3>
+          <p class="cta-learn-more__text">{{ page.ctaLearnMore.call }}</p>
+        </div>
+      </a>
+      or
+      {% endif %}
+      <a href="mailto:{{ page.ctaLearnMore.email }}">
+        <div class="cta-learn-more__text-sub-container">
+          <h3>EMAIL</h3>
+          <p class="cta-learn-more__text">{{ page.ctaLearnMore.email }}</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>

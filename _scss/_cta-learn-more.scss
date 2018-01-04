@@ -1,0 +1,146 @@
+.cta-learn-more {
+  height: 25rem;
+  width: 100%;
+  background: #981E32;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+
+  &__text-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #fff;
+    align-items: center;
+    font-size: 1.5rem;
+    margin: 2rem 1rem 1rem 1rem;
+    font-weight: 400;
+
+    a:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__text-sub-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border: 1px solid #fff;
+    margin: 2rem;
+    padding: 1.5rem;
+    min-width: 25rem;
+
+    h3 {
+      font-weight: 300;
+      margin-top: -3.05rem;
+      background-color: #981E32;
+      padding: 1rem;
+      height: 0;
+      font-size: 1rem;
+      letter-spacing: 2px;
+    }
+
+    p {
+      font-size: 2rem;
+      margin: 0;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+  }
+
+  &__heading {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 0;
+    padding: 0 1rem;
+  }
+  &__text {
+    color: #fff;
+    margin-bottom: 2rem;
+  }
+  &__button {}
+}
+
+@media screen and (max-width: $phone) {
+  .cta-learn-more {
+    height: auto;
+    width: 100%;
+    background: #981E32;
+    text-align: center;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+    }
+
+    &__text-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: #fff;
+      align-items: center;
+      font-size: 2rem;
+      margin: 2rem 1rem 1rem 1rem;
+      font-weight: 400;
+
+      a:hover {
+        text-decoration: none;
+      }
+    }
+
+    &__text-sub-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      border: 1px solid #fff;
+      padding: 1.5rem;
+      min-width: 50vw;
+
+      h3 {
+        font-weight: 300;
+        margin-top: -3.05rem;
+        background-color: #981E32;
+        padding: 1rem;
+        height: 0;
+        font-size: 1rem;
+        letter-spacing: 2px;
+      }
+
+      p {
+        font-size: 1rem;
+        margin: 0;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+    }
+
+    &__heading {
+      color: #fff;
+      font-size: 2rem;
+      margin-bottom: 0;
+      padding: 0 1rem;
+    }
+    &__text {
+      color: #fff;
+      margin-bottom: 2rem;
+    }
+    &__button {}
+  }
+}

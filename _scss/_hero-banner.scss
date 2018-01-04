@@ -1,0 +1,189 @@
+.hero-banner {
+  height: 30rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__image {
+    margin: 0;
+  }
+
+  &--home {
+    background: url("/assets/images/home-banner.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 43rem;
+  }
+
+  &__image--home {
+    height: 20.5rem;
+    background: url("/assets/images/slash-text-may.svg") no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 1;
+  }
+
+  &--experience {
+    background: url("/assets/images/experience_hero.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__image--experience {
+    height: 8rem;
+    background: url("/assets/images/experience_headline.svg") no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 1;
+  }
+
+  &--chefs {
+    background: url("/assets/images/chef-image-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__image--chefs {
+    height: 8rem;
+    background: url("/assets/images/chefs-headline.svg") no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 1;
+  }
+
+  &--sponsor {
+    background: url("/assets/images/sponsor-image-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__image--sponsor {
+    height: 8rem;
+    background: url("/assets/images/sponsor-headline.svg") no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 1;
+  }
+
+  &--attend {
+    background: url("/assets/images/attend-image-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__image--attend {
+    height: 8rem;
+    background: url("/assets/images/attend-headline.svg") no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 1;
+  }
+
+  &--impact {
+    background: url("/assets/images/impact-image-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__image--impact {
+    height: 8rem;
+    background: url("/assets/images/impact-headline.svg") no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 1;
+  }
+
+  &--volunteer {
+    background: url("/assets/images/volunteer-image-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__image--volunteer {
+    height: 8rem;
+    background: url("/assets/images/volunteer-headline.svg") no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 1;
+  }
+
+  &--contact {
+    background: url("/assets/images/contact-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__image--contact {
+    height: 8rem;
+    background: url("/assets/images/contact-headline.svg") no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 1;
+  }
+
+  &--entertainment {
+    background: url("/assets/images/entertainment-image-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__image--entertainment {
+    height: 8rem;
+    background: url("/assets/images/entertainment-headline.svg") no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 1;
+  }
+
+  &--upload {
+    background: url("/assets/images/image-upload-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__image--upload {
+    height: 8rem;
+    background: url("/assets/images/image-upload-headline.svg") no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 1;
+  }
+
+  &--404 {
+    background: url("/assets/images/image-upload-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__image--404 {
+    height: 8rem;
+    background-size: contain;
+    background-position: center;
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width: $phone) {
+  .hero-banner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__image {
+      margin: 0 3rem;
+    }
+  }
+}

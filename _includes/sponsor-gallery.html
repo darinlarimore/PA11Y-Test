@@ -1,0 +1,19 @@
+<section class="sponsor-gallery sponsor-gallery--{{ page.sponsors.backgroundColor }}">
+
+  {% if page.sponsors.heading != null %}
+    <h2 class="sponsor-gallery__heading">{{ page.sponsors.heading}}</h2>
+  {% endif %}
+  <div class="sponsor-gallery__images">
+    {% for sponsor in page.sponsors.sponsorImages %}
+      <img src="{{ sponsor.image }}" alt="{{ sponsor.name }}">
+    {% endfor %}
+  </div>
+
+  <div class="sponsor-gallery__list-wrapper">
+    <ul class="sponsor-gallery__list">
+      {% for sponsor in page.sponsors.secondary %}
+        <li class="sponsor-gallery__item">{{ sponsor.name }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

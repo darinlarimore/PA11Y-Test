@@ -1,0 +1,31 @@
+.cta-banner {
+  height: 20rem;
+  width: 100%;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  &--full {
+    background: url("/assets/images/purchase-tickets.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__heading {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+  &__text {
+    color: #fff;
+    margin-bottom: 2rem;
+  }
+  &__button {}
+}

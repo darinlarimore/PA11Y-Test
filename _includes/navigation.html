@@ -1,0 +1,52 @@
+<nav class="navbar-wrapper">
+  {% assign default_paths = site.pages | map: "path" %}
+  {% assign page_paths = site.navigation_pages | default: default_paths %}
+    <input type="checkbox" id="navbar-checkbox" class="navbar-checkbox">
+    <div class="navbar-menu navbar-menu-right navbar-menu-dark">
+      <ul class="navbar-navigation">
+        <li class="navbar-header">
+            <a class="navbar-brand" aria-label="Rev Logo" href="/"><img src="/assets/images/Rev-reversed_RGB.svg" alt="Rev Logo"></a>
+            <label class="navbar-hamburger navbar-hamburger-doublespin" for="navbar-checkbox"> <span></span> </label>
+        </li>
+        {% if page_paths %}
+          {% for path in page_paths %}
+            {% assign my_page = site.pages | where: "path", path | first %}
+            {% if my_page.title %}
+              {% unless my_page.title == "Attend" %}
+                {% if my_page.subpages %}
+                  {% if my_page.title == page.title %}
+                    <li style="order: {{ my_page.menuOrder }};" class="navbar-item active dropdown"> <a href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+                      <ul>
+                      {% for page in my_page.subpages %}
+                        <li class="navbar-item" ><a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a></li>
+                      {% endfor %}
+                      </ul>
+                  {% else %}
+                    <li style="order: {{ my_page.menuOrder }};" class="navbar-item dropdown"> <a href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+                      <ul>
+                      {% for page in my_page.subpages %}
+                        <li class="navbar-item" ><a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a></li>
+                      {% endfor %}
+                      </ul>
+                  {% endif %}
+                {% else %}
+                  {% if my_page.title == page.title %}
+                    <li style="order: {{ my_page.menuOrder }};" class="navbar-item active {{ my_page.menuVisibility }}"> <a href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+                  {% else %}
+                      <li style="order: {{ my_page.menuOrder }};" class="navbar-item {{ my_page.menuVisibility }}"> <a href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+                  {% endif %}
+                {% endif %}
+                </li>
+              {% endunless %}
+              {% if my_page.title == "Attend" %}
+                <div style="order: {{ my_page.menuOrder }};" class="navbar-item__stick-right">
+                  <li class="navbar-item {{ my_page.menuVisibility }}"> <a href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></li>
+                </div>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+        </li>
+      </ul>
+    </div>
+  </nav>

@@ -1,0 +1,133 @@
+.cta-subpages {
+  background-color: #981E32;
+  height: 31.786rem; /* 445/14 */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &__left {
+    background: url("/assets/images/subpage-bg-left.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &--attend {
+      background: url("/assets/images/entrance-line.png");
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover;
+    }
+  }
+
+  &__right {
+    background: url("/assets/images/subpage-bg-right.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &--sponsor {
+      background: url("/assets/images/heli.png");
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover;
+    }
+  }
+
+  &__heading {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    max-width: 34rem;
+  }
+  &__text {
+    color: #fff;
+    margin: 0 2rem 2rem 2rem;
+    max-width: 30rem;
+  }
+  &__button {
+    display: flex;
+    text-align: center;
+    color: #fff;
+    background-color: #EF4550;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: $phone) {
+  .cta-subpages {
+    background-color: #981E32;
+    height: 40rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &__left {
+      background: url("/assets/images/subpage-bg-left.png");
+      background-repeat: no-repeat;
+      background-position: top;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__right {
+      background: url("/assets/images/subpage-bg-right.png");
+      background-repeat: no-repeat;
+      background-position: top;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__heading {
+      color: #fff;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      padding: 0 1rem;
+      max-width: 34rem;
+    }
+    &__text {
+      color: #fff;
+      margin-bottom: 2rem;
+    }
+    &__button {
+      display: flex;
+      text-align: center;
+      color: #fff;
+      background-color: #EF4550;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}

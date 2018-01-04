@@ -1,0 +1,13 @@
+<h2 class="ticket-prices__title">Types of Tickets</h2>
+<section class="ticket-prices-wrapper">
+  <div class="ticket-prices">
+    {% for type in page.tickets %}
+      <div class="ticket-prices__half">
+        <h3 class="ticket-prices__heading ticket-prices__heading--{{ type.buttonStyle }}">{{ type.heading }}</h3>
+        <p>{{ type.text }}</p>
+        <h4 class="ticket-prices__price">{{ type.price }}</h4>
+        <a target="_blank" href="{{ type.url }}" data-ticket-btn class="button ticket-prices__button ticket-prices__button--{{ type.buttonStyle }}">{{ type.buttonText }}</a>
+      </div>
+    {% endfor %}
+  </div>
+</section>

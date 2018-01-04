@@ -1,0 +1,63 @@
+.video-player {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  z-index: 0;
+  &__text {
+    background-color: #6D0025;
+    width: 24rem;
+    margin: 5rem 6rem 6rem 2rem;
+    padding: 3rem 4rem 2rem 2rem;
+    color: #fff;
+  }
+
+  &__video-container {
+    margin: 7rem 2rem 5rem -9rem;
+    background-size: cover;
+    width: 35.5rem;
+    height: 20rem;
+
+    iframe {
+        border-radius: 8px;
+        width: 100%;
+        height: 100%;
+    }
+
+    video {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: $phone) {
+  .video-player {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    &__text {
+      background-color: #6D0025;
+      width: fit-content;
+      margin: 0;
+      padding: 3rem 3rem 4rem 3rem;
+      color: #fff;
+    }
+
+    &__video-container {
+      height: auto;
+      margin: -3rem 0 0 0;
+      background-size: cover;
+      z-index: 10;
+      width: 90%;
+      height: 50.7vw;
+
+      iframe {
+          border-radius: 8px;
+          width: 100%;
+          height: 100%;
+      }
+    }
+  }
+}

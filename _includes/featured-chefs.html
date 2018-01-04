@@ -1,0 +1,39 @@
+<section>
+  <div class="featured-chefs">
+    <h2 class="featured-chefs__heading">Featured Chefs & Restaurants</h2>
+    <div class="featured-chefs__filter">
+      <p>Sort by: </p>
+      <div class="featured-chefs__switch">
+        <input data-restaurant-filter type="radio" class="featured-chefs__switch__input" name="view" value="Restaurant" id="restaurant" checked>
+        <label for="restaurant" class="featured-chefs__switch__label featured-chefs__switch__label--off">Restaurants</label>
+        <input data-chef-filter type="radio" class="featured-chefs__switch__input" name="view" value="Chef" id="chef">
+        <label for="chef" class="featured-chefs__switch__label featured-chefs__switch__label--on">Chefs</label>
+        <span class="featured-chefs__switch__selection"></span>
+      </div>
+    </div>
+    <div data-isotope class="featured-chefs__gallery hidden">
+      {% for chef in page.chefs %}
+        <div class="featured-chefs__container" data-chef-container  data-chef="{{ chef.name }}" data-restaurant="{{ chef.restaurant }}">
+          <div class="featured-chefs__image__overlay">
+            <div class="featured-chefs__image-text">
+              <p class="featured-chefs__image-text__restaurant">{{ chef.restaurant }}</p>
+              <p class="featured-chefs__image-text__chef">{{ chef.name }}</p>
+            </div>
+          </div>
+          <div class="featured-chefs__image-wrapper">
+            <div data-chef-image style="background-image: url('{{ chef.imageUrl }}');" class="featured-chefs__image"></div>
+          </div>
+          <div data-chef-description class="featured-chefs__description featured-chefs__description--hidden">
+            <div data-chef-close class="featured-chefs__description__x"></div>
+            <p class="featured-chefs__description__paragraph">{{ chef.paragraph }}</p>
+            <div class="featured-chefs__description__overlay"></div>
+            <!-- <div class="featured-chefs__description__pair">
+              <p class="featured-chefs__description__chef">{{ chef.driver }}</p>
+              <p class="featured-chefs__description__driver">Driver Pairing</p>
+            </div> -->
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

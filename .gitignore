@@ -1,0 +1,9 @@
+.sass-cache
+.jekyll-metadata
+/assets/
+node_modules
+optimization-fix-this-file-is-ignored.js
+yarn-error.log
+.yarnclean
+.DS_Store
+_site

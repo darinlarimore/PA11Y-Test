@@ -1,0 +1,13 @@
+<section class="relive-banner">
+  <div class="relive-banner__wrapper">
+    <div class="relive-banner__text-area">
+      <h2 class="relive-banner__heading">{{ page.relive.heading }}</h2>
+      <p class="relive-banner__paragraph">{{ page.relive.paragraph }}</p>
+    </div>
+    <div class="relive-banner__buttons">
+      {% for button in page.relive.buttons %}
+        <a href="{{ button.link }}" class="button relive-banner__button">{{ button.text }}</a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

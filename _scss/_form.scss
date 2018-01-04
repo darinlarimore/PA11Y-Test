@@ -1,0 +1,97 @@
+.form {
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  padding: 3rem 2rem 2rem 2rem;
+
+  &__list-text {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    flex-direction: column;
+  }
+
+  &--2 {
+    background-image: url("/assets/images/indy-car-blue.png");
+    padding: 9rem 2rem;
+  }
+
+  &__wrapper--2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 5rem;
+  }
+
+  &__text--2 {
+    width: 60%;
+    z-index: 1;
+  }
+
+  &--1 {
+  }
+
+  &__wrapper--1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &__text--1 {
+    width: 40rem;
+    z-index: 1;
+
+    h1 {
+      text-align: center;
+    }
+
+    p {}
+  }
+}
+
+@media screen and (max-width: $phone) {
+  .paragraph {
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 3rem 2rem 2rem 2rem;
+
+    &--2 {
+      background-image: url("/assets/images/indy-car-blue.png");
+      padding: 9rem 0rem 50% 0;
+    }
+
+    &__wrapper--2 {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding-right: 0;
+    }
+
+    &__text--2 {
+      width: 90%;
+      z-index: 1;
+      text-align: center;
+    }
+
+    &--1 {
+    }
+
+    &__wrapper--1 {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    &__text--1 {
+      width: 40rem;
+      z-index: 1;
+
+      h1 {
+        text-align: center;
+      }
+
+      p {}
+    }
+  }
+}

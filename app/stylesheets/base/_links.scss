@@ -1,0 +1,18 @@
+a {
+	color: $yellow;
+	text-decoration: none;
+	font-style: italic;
+
+	&:visited {
+		color: darken($yellow, 20%);
+	}
+
+	&:hover {
+		color: $yellow;
+		text-decoration: underline;
+	}
+}
+
+.relive-link {
+	color: $yellow;
+}

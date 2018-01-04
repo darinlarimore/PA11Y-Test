@@ -1,0 +1,25 @@
+<section class="become-sponsor">
+  <h2 class="become-sponsor__heading">{{ page.becomeSponsor.heading }}</h2>
+  <p class="become-sponsor__sub-heading">{{ page.becomeSponsor.subHeading }}</p>
+  <div class="become-sponsor__levels-wrapper">
+    <div class="become-sponsor__levels-list">
+      {% for level in page.becomeSponsor.levels%}
+       {% if level.text == null %}
+          <div class="become-sponsor__item">
+            <h3 class="become-sponsor__level become-sponsor__level--{{ level.style }}">
+              <a target="_blank" href="{{ level.link }}">{{ level.title }}</a>
+              <span>{{ level.souldoutText }}</span>
+            </h3>
+            <p class="become-sponsor__price become-sponsor__price--{{ level.style }}">{{ level.price }}</p>
+          </div>
+        {% else %}
+        <div class="become-sponsor__item">
+          <h3 class="become-sponsor__level become-sponsor__level--{{ level.style }}">{{ level.title }}<span>{{ level.souldoutText }}</span></h3>
+          <p class="become-sponsor__price become-sponsor__price--{{ level.style }}">{{ level.price }}</p>
+          <a target="_blank" href="{{ level.link }}" class="become-sponsor__text">{{ level.text }}</a>
+        </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

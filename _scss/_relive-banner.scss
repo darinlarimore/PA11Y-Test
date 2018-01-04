@@ -1,0 +1,81 @@
+.relive-banner {
+  background-image: url("/assets/images/relive-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 3rem;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+
+  &__text-area {
+    color: #fff;
+    max-width: 23rem;
+    margin-right: 1.5rem;
+    text-align: left;
+  }
+
+  &__heading {
+
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__button {
+    width: 8em;
+    margin: .45rem;
+  }
+
+  &__paragraph {
+  }
+}
+
+@media screen and (max-width: $phone) {
+  .relive-banner {
+    background-image: url("/assets/images/relive-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 3rem;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+    }
+
+    &__text-area {
+      color: #fff;
+      max-width: 23rem;
+      margin-right: 0;
+      text-align: center;
+    }
+
+    &__heading {
+
+    }
+
+    &__buttons {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__button {
+      width: 8em;
+      margin: .45rem;
+    }
+
+    &__paragraph {
+    }
+  }
+}

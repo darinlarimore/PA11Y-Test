@@ -1,0 +1,13 @@
+{% for card in page.imageCard %}
+<div class="content-wrapper">
+  <section class="image-card-{{ card.style }}">
+    <div class="image-card-{{ card.style }}__text">
+      <h2>{{ card.heading }}</h2>
+      {{ card.text }}
+    </div>
+    <div class="image-card-{{ card.style }}__image-container">
+      <img src="{{ card.image }}" alt="{{ card.image }}">
+    </div>
+  </section>
+</div>
+{% endfor %}
